@@ -139,10 +139,10 @@ func UpdateNode(node, clusterName string) {
 	nodeInfo := GetNodeInfo(node)
 
 	// Update prom metrics
-	prometheusLabels = []string{"instance", "cluster"}
+	prometheusLabels = []string{"ip", "cluster"}
 	labels := prometheus.Labels{
-		"instance": ip,
-		"cluster":  clusterName,
+		"ip":      ip,
+		"cluster": clusterName,
 	}
 	esConnectivityFailedGauge.With(labels).Set(float64(nodeInfo.Failed))
 	esConnectivitySuccessfulGauge.With(labels).Set(float64(nodeInfo.Successful))

@@ -22,9 +22,9 @@ curl -s 10.0.0.10:9200/_cluster/stats | jq ._nodes
 
 The exporter support 3 metrics at: ***{local_IP}:{listen_port}/metrics***
 
-* **Successful connected node**: *elasticsearch_node_connectivity_successful{cluster,exported_instance}*
-* **Disconnected node**: *elasticsearch_node_connectivity_failed{cluster,exported_instance}*
-* **Total node of cluster**: *elasticsearch_node_connectivity_total{cluster,exported_instance}*
+* **Successful connected node**: elasticsearch_node_connectivity_successful{cluster,exported_instance}
+* **Disconnected node**: elasticsearch_node_connectivity_failed{cluster,exported_instance}
+* **Total node of cluster**: elasticsearch_node_connectivity_total{cluster,exported_instance}
 
 ## How to use
 
