@@ -7,8 +7,8 @@ Group=root
 Restart=always
 Type=simple
 ExecStart=/home/duy_nguyen/elasticsearch_connectivity_exporter \
-            -timeout-value 1000 \
-            -port 38080 \
+            -timeout-value 2 \
+            -port 8080 \
             -log-file /home/duy_nguyen/log.txt \
             -folder /home/duy_nguyen/targets/
 
